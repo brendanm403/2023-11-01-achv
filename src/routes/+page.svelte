@@ -1,12 +1,26 @@
 <script>
+  import MessageBox from "../lib/components/MessageBox.svelte";
   let dailyContent = "demos 2023-11-02";
-  let obj = {
-    name: "bob",
-    age: 33
-  }
-  const description = "this is a demo of svelte";
+  let obj = {title:"the message title", description: "the description"}
+  let messageForTheBox =[
+    {title: "bob", description: "33 years old"},
+    {title: "doug", description: "30 years old"},
+    {title: "jane", description: "25 years old"}
+  ]; 
+
 </script>
 
-<h1>Svelte {dailyContent}</h1>
+<h1 class="text-5xl">Svelte {dailyContent}</h1>
 
-<a href="/about">about</a>
+<MessageBox title="Hello" description="dsfsdf sdfsdf sdfsdf sdfsdf sdfsdf"/>
+
+<MessageBox title={obj.title} description={obj.description}/>
+
+ <!-- this passes the whole object and it sorts itself out because the object that was passed has the same property keys  as the component file  -->
+<MessageBox {...obj} />
+
+<h2>loop example</h2>
+
+{#each messageForTheBox as box}
+  <MessageBox {...box} />
+{/each}
