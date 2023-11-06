@@ -1,5 +1,6 @@
 <script>
   import ListItem from "../../lib/components/ListItem.svelte";
+  import Card from "../../lib/components/Card.svelte";
   let listItems = ["crow", "gopher", "cat", "dog"];
   let secondList = [
     {name: "jake", species: "bird"},
@@ -31,3 +32,5 @@
     {/each}
   </ul>
 </section>
+
+<Card />
