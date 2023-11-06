@@ -1,5 +1,6 @@
 <script>
   import MessageBox from "../lib/components/MessageBox.svelte";
+  import PageHeader from "../lib/components/PageHeader.svelte";
   let dailyContent = "demos 2023-11-02";
   let obj = {title:"the message title", description: "the description"}
   let messageForTheBox =[
@@ -7,8 +8,14 @@
     {title: "doug", description: "30 years old"},
     {title: "jane", description: "25 years old"}
   ]; 
-
+  let headerContent = {
+    pageTitle: "Home",
+    pageDescription: "this is the home page",
+    bgColor: "bg-red-400"
+  }
 </script>
+
+<PageHeader {...headerContent}/>
 
 <h1 class="text-5xl">Svelte {dailyContent}</h1>
 

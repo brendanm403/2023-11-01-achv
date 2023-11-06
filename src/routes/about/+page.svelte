@@ -1,6 +1,7 @@
 <script>
   import ListItem from "../../lib/components/ListItem.svelte";
   import Card from "../../lib/components/Card.svelte";
+  import PageHeader from "../../lib/components/PageHeader.svelte";
   let listItems = ["crow", "gopher", "cat", "dog"];
   let secondList = [
     {name: "jake", species: "bird"},
@@ -8,12 +9,14 @@
     {name: "jill", species: "fish"},
     {name: "john", species: "turtle"}
   ]
+  let headerContent = {
+    pageTitle: "About",
+    pageDescription: "This is a page to learn about the site",
+    bgColor: "bg-green-400"
+  }
 </script>
 
-
-<header>
-  <h1 class="text-5xl text-center">About Page</h1>
-</header>
+<PageHeader {...headerContent}/>
 
 <section>
   <h2>Our Example List</h2>
