@@ -13,6 +13,8 @@
     pageDescription: "this is the home page",
     bgColor: "bg-red-400"
   }
+  export let data;
+  let { countries } = data;
 </script>
 
 <PageHeader {...headerContent}/>
@@ -31,3 +33,9 @@
 {#each messageForTheBox as box}
   <MessageBox {...box} />
 {/each}
+
+<ul>
+  {#each countries as country}
+    <li>{country.name}</li>
+  {/each}
+</ul>

@@ -1,6 +1,7 @@
 <script>
-  import ListItem from "../../lib/components/ListItem.svelte";
-  import Card from "../../lib/components/Card.svelte";
+  import ListItem from "$lib/components/ListItem.svelte";
+  // the dollar sign is a cool trick to avoid using ../ to navigate file paths //
+  import Card from "$lib/components/Card.svelte";
   import PageHeader from "../../lib/components/PageHeader.svelte";
   let listItems = ["crow", "gopher", "cat", "dog"];
   let secondList = [
