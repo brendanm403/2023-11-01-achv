@@ -1,8 +1,8 @@
 import { supabase } from "$lib/supabaseClient";
 
 export async function load() {
-  const { data } = await supabase.from("new_collection_todos").select();
+  const { data } = await supabase.from("blog_posts").select();
   return {
-    newCollectionTodos: data ?? [],
+    blogPosts: data ?? [],
   };
 }
