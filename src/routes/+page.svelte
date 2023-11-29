@@ -15,6 +15,7 @@
   }
   export let data;
   let { countries } = data;
+  console.log(countries);
 </script>
 
 <PageHeader {...headerContent}/>
